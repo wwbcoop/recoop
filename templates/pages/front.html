@@ -1,0 +1,20 @@
+{# Site front page #} {% extends 'layouts/single-fluid-column.html' %} {% load static i18n utils %}
+{% block body_classes %}front{% endblock %}
+{% block page__title %}{% trans 'Dominio cooperativo' %}{% endblock %}
+
+{% block main %}
+    <div class="site-name">
+        <h1 class="site-name__title">Recoop</h1>
+        <span class="site-name__version">BETA</span>
+    </div>
+    <h2 class="site-description">
+        <mark>
+        {% blocktrans trimmed %}
+        recoop es una estrategia colectiva
+        para la visibilización y empoderamiento
+        de la economía cooperativa y las
+        iniciativas orientadas al bien común.
+        {% endblocktrans %}
+      </mark>
+    </h2>
+{% endblock %}
