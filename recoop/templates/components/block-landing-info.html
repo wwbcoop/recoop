@@ -1,0 +1,18 @@
+{# landing info #}
+{% load i18n textblock_tags %}
+
+<div class="landing-info">
+    <h2 class="landing-info__text">
+        {% textblock 'landing' request.LANGUAGE_CODE %}
+    </h2>
+    <div class="landing-info__actions">
+        <a href="{% url 'apply' %}"
+           class="landing-info__action landing-info__action--signup">
+            {% trans 'Solicita un dominio' %}
+        </a>
+        <a href="{% url 'contact' %}"
+           class="landing-info__action landing-info__action--info">
+            {% trans 'Contacta' %}
+        </a>
+    </div>
+</div>

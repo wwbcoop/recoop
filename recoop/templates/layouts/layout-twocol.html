@@ -1,0 +1,13 @@
+{# Renders a template with a single column of fixed with #}
+{% extends 'base.html' %}
+
+{% block layout %}
+<div class="layout layout--two-col {% block layout_classes %}{% endblock %}">
+    <section class="layout__left">
+    {% block left %}{% endblock %}
+    </section>
+    <section class="layout__right">
+    {% block right %}{% endblock %}
+    </section>
+</div>
+{% endblock %}

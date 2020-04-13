@@ -1,0 +1,57 @@
+.form__field--default
+  margin-bottom: $m/3
+  padding: $m
+  &:not(:last-of-type)
+    border-bottom: 1px dashed
+
+.form__label--default
+  font-weight: 700
+  font-family: $font_headers
+  margin-bottom: $m/4
+  text-transform: uppercase
+  display: block
+
+.form__label--required:after
+    content: "*"
+    color: red
+
+.form__helptext--default
+  font-size: .95em
+  margin-top: $m/2
+  opacity: .75
+
+.form__field--default
+  input,
+  textarea
+    border: 0
+    background-color: #eee
+    padding: $m/2
+  input
+    border-bottom: 2px solid
+  textarea
+    border-left: 2px solid
+  input:focus,
+  textarea:focus
+    border-color: red
+
+
+.form__submit--default,
+.form__cancel--default
+  padding: $m*.75 $m/2 $m/2
+  font-family: $font_headers
+  font-size: 1.2em
+  display: inline-block
+  margin-bottom: $m/2
+  text-transform: uppercase
+  transition: border-color .1s ease
+  border: 3px solid $color_text
+  background-color: white
+  color: $color_text
+  margin-top: $m
+  &:hover
+    border: 3px solid rgba(red, .85)
+
+.form__cancel--default
+  border: 0
+  &:hover
+    cursor: pointer

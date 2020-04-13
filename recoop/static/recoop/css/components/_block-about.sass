@@ -1,0 +1,19 @@
+// Site's about text
+
+.about
+  font-size: 1.2em
+  line-height: 1.3em
+  font-family: $font_headers
+  color: $color_text
+  p
+    +links_text
+    margin-bottom: $m/2
+  p:last-child
+    font-family: $font_text
+.about__links
+  margin: $m
+  +links_text
+.about__link
+  margin-bottom: $m/3
+  &::before
+    content: "· "

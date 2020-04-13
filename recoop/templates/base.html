@@ -1,0 +1,54 @@
+{# Base template for the site #} {% load static feather_tags %}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        {# Title and description #}
+        <title>
+            {% block htmltitle %}{% endblock %} | {{ document_title }}
+        </title>
+
+        {% if page_description %}
+            <meta name="description" content="{{ page_description }}" />
+        {% else %}
+            <meta name="description" content="{{ document_description }}" />
+        {% endif %}
+
+        {# Robots and humans #}
+        <meta name="robots" content="robots.txt" />
+
+        {# Favicon #}
+        <link rel="icon" type="image/png" href="{% static 'recoop/img/favicon.ico' %}" />
+
+        {# Styles #}
+        <link rel="stylesheet" type="text/css" href="{% static 'recoop/css/style.css' %}" />
+
+        {# Block for the extension of base head, to include css/js libraries #}
+        {% block page_header %}{% endblock %}
+    </head>
+
+    <body class="{% if user.is_authenticated %}logged-in{% endif %}{% block body_classes %}{% endblock %}">
+        {# User toolbar #}
+        <nav class="region-toolbar">
+            {% include 'components/menu-user.html' %}
+        </nav>
+
+        {# Header #}
+        <div class="region-header">
+            {% include 'components/block-lang-switcher.html' %}
+            {% include 'components/block-branding.html' %}
+            {% include 'components/view-messages.html' with messages=messages %}
+        </div>
+
+        {# Content #}
+        <main class="region-content">
+            {% block layout %}{% endblock %}
+        </main>
+
+        {# Scripts #}
+        {% block page_scripts %}{% endblock %}
+    </body>
+</html>

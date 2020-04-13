@@ -1,0 +1,13 @@
+{# messages/notifications block #}
+
+{% if messages %}
+<div class="messages">
+    <ul class="messages__items">
+        {% for message in messages %}
+            <li{% if message.tags %} class="messages__item {{ message.tags }}"{% endif %}>
+                {{ message }}
+            </li>
+        {% endfor %}
+    </ul>
+</div>
+{% endif %}

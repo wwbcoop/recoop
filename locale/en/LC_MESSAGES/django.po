@@ -1,0 +1,270 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-04-13 16:17+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: apps/contact/forms.py:15 apps/initiative/models.py:10
+#: apps/textblock/models.py:12
+msgid "Nombre"
+msgstr "Name"
+
+#: apps/contact/forms.py:18
+msgid "Asunto"
+msgstr "Subject"
+
+#: apps/contact/forms.py:21 apps/initiative/models.py:45
+msgid "Correo electrónico"
+msgstr "Email"
+
+#: apps/contact/forms.py:24
+msgid "Mensaje"
+msgstr "Message"
+
+#: apps/contact/forms.py:41
+msgid "Ha habido un nuevo correo de contacto en "
+msgstr ""
+
+#: apps/contact/views.py:19
+msgid "Gracias por tu mensaje!"
+msgstr "Thanks for your message"
+
+#: apps/initiative/models.py:15
+msgid "Nombre de la iniciativa"
+msgstr "Name of the initiative"
+
+#: apps/initiative/models.py:19
+msgid "Descripción"
+msgstr "Description"
+
+#: apps/initiative/models.py:23
+msgid "Explícanos la iniciativa para que podamos valorar tu solicitud"
+msgstr "Explain the initiative to us so we can evaluate your proposal"
+
+#: apps/initiative/models.py:27
+msgid "IP"
+msgstr ""
+
+#: apps/initiative/models.py:31
+msgid "IP del servidor donde vas a alojar el dominio"
+msgstr "IP of the server where you are going to host the domain"
+
+#: apps/initiative/models.py:35
+msgid "Subdominio"
+msgstr "Subdomain"
+
+#: apps/initiative/models.py:40
+msgid ""
+"Escoge el subdominio que deseas usar. Por ejemplo un valor \"ejemplo\" "
+"creará un subdominio \"ejemplo.coop.re\""
+msgstr ""
+"Choose the subdomain you want to use. For instance, 'example' will create "
+"the subdomain 'example.cooop.re'"
+
+#: apps/initiative/models.py:49
+msgid "Un correo electrónico para que podamos contactar contigo"
+msgstr "An email so we can stay in touch"
+
+#: apps/initiative/models.py:55
+msgid "Content slug"
+msgstr ""
+
+#: apps/initiative/models.py:59
+msgid "Creation date"
+msgstr ""
+
+#: apps/initiative/models.py:64
+msgid "Last modified"
+msgstr ""
+
+#: apps/initiative/models.py:69
+msgid "Publico"
+msgstr ""
+
+#: apps/initiative/models.py:75
+msgid "iniciativa"
+msgstr "Initiative"
+
+#: apps/initiative/models.py:76
+msgid "iniciativas"
+msgstr ""
+
+#: apps/initiative/views.py:20
+msgid ""
+"Tu iniciativa ha sido enviada a moderación. Gracias por tu interés, "
+"recibirás noticias en breve."
+msgstr ""
+
+#: apps/textblock/models.py:17
+msgid "Escoge el nombre que se verá públicamente asociado a este perfil"
+msgstr ""
+
+#: apps/textblock/models.py:21
+msgid "Texto"
+msgstr ""
+
+#: apps/textblock/models.py:25
+msgid "Texto del bloque"
+msgstr ""
+
+#: apps/textblock/models.py:29
+msgid "Texto inglés"
+msgstr ""
+
+#: apps/textblock/models.py:33
+msgid "Texto del bloque en inglés"
+msgstr ""
+
+#: apps/textblock/models.py:38
+msgid "bloque"
+msgstr ""
+
+#: apps/textblock/models.py:39
+msgid "bloques"
+msgstr ""
+
+#: apps/utils/templates/fake-breadcrumb.html:5
+msgid "Volver a la página anterior"
+msgstr ""
+
+#: apps/utils/templates/limited-choices-select.html:5
+msgid "Todas las opciones"
+msgstr ""
+
+#: apps/utils/templates/limited-textarea-widget.html:6
+msgid "Has escrito"
+msgstr ""
+
+#: apps/utils/templates/limited-textarea-widget.html:6
+msgid "caracteres. Tienes un límite de "
+msgstr ""
+
+#: apps/utils/templates/share.html:4
+msgid "Comparte"
+msgstr ""
+
+#: apps/utils/validators.py:15
+#, python-format
+msgid "El ancho de la imagen debería ser mayor a %(min_width)s píxeles"
+msgstr ""
+
+#: apps/utils/validators.py:16
+#, python-format
+msgid "El ancho de la imagen debería ser menor a %(max_width)s píxeles"
+msgstr ""
+
+#: apps/utils/validators.py:17
+#, python-format
+msgid "El alto de la imagen debería ser mayor a %(min_height)s píxeles"
+msgstr ""
+
+#: apps/utils/validators.py:18
+#, python-format
+msgid "El alto de la imagen debería ser menor a %(max_height)s píxeles"
+msgstr ""
+
+#: recoop/settings.py:45
+msgid ""
+"coop.re es un dominio colectivo para la visibilización y empoderamiento de "
+"la economía cooperativa y las prácticas que crean bien común"
+msgstr ""
+"coop.re it's a collective domain name for the visibilization of the "
+"cooperative economy and the commons-oriented initiatives"
+
+#: recoop/settings.py:117
+msgid "English"
+msgstr ""
+
+#: recoop/settings.py:118
+msgid "Español"
+msgstr ""
+
+#: recoop/templates/403.html:13
+msgid "No tienes permiso para acceder a esta página"
+msgstr ""
+
+#: recoop/templates/404.html:18
+msgid "La página que buscas no existe. ¿Las has escrito correctamente?"
+msgstr "The page you're looking for doesn't exist.Did you write it properly?"
+
+#: recoop/templates/components/block-branding.html:6
+msgid "Volver a la página de inicio"
+msgstr "Go back to homepage"
+
+#: recoop/templates/components/block-landing-info.html:11
+#: recoop/templates/pages/page-apply.html:16
+msgid "Solicita un dominio"
+msgstr "Apply for a domain name"
+
+#: recoop/templates/components/block-landing-info.html:15
+#: recoop/templates/pages/page-contact.html:5
+#: recoop/templates/pages/page-contact.html:16
+msgid "Contacta"
+msgstr "Stay in touch"
+
+#: recoop/templates/components/form.html:10
+msgid "It seems there's an error in the form. Please review it."
+msgstr ""
+
+#: recoop/templates/components/form.html:12
+msgid "It seems there're errors in the form. Please review it."
+msgstr ""
+
+#: recoop/templates/components/form.html:52
+msgid "Guarda los cambios"
+msgstr "Save changes"
+
+#: recoop/templates/components/form.html:56
+msgid "Cancelar"
+msgstr "Cancel"
+
+#: recoop/templates/components/section-network.html:7
+msgid "Últimas iniciativas en coop.re"
+msgstr ""
+
+#: recoop/templates/components/section-network.html:11
+msgid "Vuelve atrás"
+msgstr ""
+
+#: recoop/templates/components/section-network.html:14
+msgid "Ver todas las iniciativas de la red"
+msgstr ""
+
+#: recoop/templates/components/view-network.html:26
+msgid "Todavía no hay iniciativas en la de red de Recoop"
+msgstr ""
+
+#: recoop/templates/pages/page-apply.html:5
+msgid "Solicita un subdominio"
+msgstr "Apply for a subdomain"
+
+#: recoop/templates/pages/page-apply.html:19
+msgid "Enviar solicitud"
+msgstr "Submit"
+
+#: recoop/templates/pages/page-contact.html:19
+msgid "Enviar mensaje"
+msgstr "Submit"
+
+#: recoop/templates/pages/page-front.html:5
+msgid "Hola!"
+msgstr "Hello!"
+
+#: recoop/templates/pages/page-login.html:5
+#: recoop/templates/pages/page-login.html:16
+msgid "Login"
+msgstr ""

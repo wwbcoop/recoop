@@ -1,0 +1,22 @@
+{# Site front page #}
+{% extends 'layouts/layout-twocol.html' %}
+{% load static i18n %}
+
+{% block htmltitle %}{% trans 'Contacta' %}{% endblock %}
+
+{% block body_classes %}page--contact{% endblock %}
+{% block layout_classes %}layout--contact{% endblock %}
+
+{% block left %}
+    {% include 'components/block-landing-info.html' %}
+{% endblock %}
+
+{% block right %}
+<h1 class="page__title page__title--contact">
+    {% trans 'Contacta' %}
+</h1>
+<div class="page__content page__content--contact">
+    {% trans 'Enviar mensaje' as form_submit %}
+    {% include 'components/form.html' with form=form modifier="default" submit=form_submit %}
+</div>
+{% endblock %}

@@ -1,0 +1,96 @@
+//
+// Base reset of DOM elements
+//
+
+*
+  box-sizing: border-box
+
+html
+  font-size: $size_base
+
+body
+  position: relative
+  cursor: crosshair
+  margin: 0
+  max-width: 100vw
+  min-height: 100vh
+  overflow-x: hidden
+  color: $color_text
+  background: url('../img/home-bg.png') left bottom no-repeat fixed white
+  background-size: auto calc(100vh - 150px)
+
+main
+  font-family: $font_text
+  font-weight: $font_text_weight
+
+// RESET OF DEFAULT MARGINS AND PADDINGS
+p
+  margin: 0
+ul,li
+  padding: 0
+  margin: 0
+figure
+  margin: 0
+
+// SET DEFAULT TEXT SIZES
+@for $i from 1 through 6
+  h#{$i}
+    +h($i)
+
+small
+  font-size: #{$size_small}em
+
+// RESPONSIVE IMAGES BY DEFAULT
+img
+  max-width: 100%
+  height: auto
+
+iframe
+  max-width: 100%
+
+// LISTS
+li
+  list-style: none
+
+// RESET LINK DEFAULT STYLES
+a
+  text-decoration: none !important
+a:focus
+  outline: 0
+
+// RESET FORM DEFAULT STYLES
+input,
+select,
+button,
+textarea
+  max-width: 100%
+  &::focus,
+  &::-moz-focus-outer,
+  &::-moz-focus-inner,
+    border  : 0
+    outline : 0
+
+select
+  &:hover
+    cursor: pointer
+
+// SELECTION COLORS
+::-moz-selection
+  background: $color_selection_background
+  color     : $color_selection_text
+::selection
+  background: $color_selection_background
+  color     : $color_selection_text
+
+// CHROME SCROLLBARS
+::-webkit-scrollbar
+  height: $m
+  width: $m/3
+  background: $color_scrollbar_background
+
+::-webkit-scrollbar-thumb
+  background-color: $color_scrollbar_thumb
+
+*
+  scrollbar-color: $color_scrollbar_thumb $color_scrollbar_background
+  scrollbar-width: thin

@@ -1,0 +1,22 @@
+{# frontpage network section #}
+
+<section id="network">
+    <div class="container-left">
+        <div class="network">
+            <h5 class="network-title">
+              {% trans 'Últimas iniciativas en coop.re' %}
+            </h5>
+            <nav class="network-nav">
+                <a class="network-nav__back" href="#">
+                  {% trans 'Vuelve atrás' %}
+                </a>
+                <a class="network-nav__forward" href="#red">
+                    {% trans 'Ver todas las iniciativas de la red' %}
+                </a>
+            </nav>
+            {% include 'components/view-network.html' %}
+        </div>
+    <div class="container-right">
+        <div class="network-map" id="recoop_map"></div>
+    </div>
+</section>

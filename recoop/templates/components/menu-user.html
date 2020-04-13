@@ -1,0 +1,26 @@
+{# user menu #}
+{% load static feather_tags %}
+
+<div class="menu-user">
+    <ul class="menu-user__items">
+        {% if request.user.is_anonymous %}
+        <li class="menu-user__item">
+            <a href="{% url 'login' %}">
+                {% icon 'log-in' %}
+            </a>
+        </li>
+        {% endif %}
+        {% if request.user.is_staff %}
+        <li class="menu-user__item">
+            <a href="{% url 'admin:index' %}">
+                {% icon 'settings' %}
+            </a>
+        </li>
+        <li class="menu-user__item">
+            <a href="{% url 'logout' %}">
+                {% icon 'log-out' %}
+            </a>
+        </li>
+        {% endif %}
+    </ul>
+</div>

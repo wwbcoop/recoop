@@ -1,0 +1,20 @@
+{# Site front page #}
+{% extends 'layouts/layout-twocol.html' %}
+{% load static i18n %}
+
+{% block htmltitle %}{% trans 'Hola!' %}{% endblock %}
+
+{% block body_classes %}page--front{% endblock %}
+{% block layout_classes %}layout--front{% endblock %}
+
+{% block left %}
+<section id="landing">
+    {% include 'components/block-landing-info.html' %}
+</section>
+{% endblock %}
+
+{% block right %}
+<div class="page__content page__content--front">
+    {% include 'components/block-about.html' %}
+</div>
+{% endblock %}

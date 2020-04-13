@@ -1,0 +1,10 @@
+{# Renders a template with a single column of fixed with #}
+{% extends 'base.html' %}
+
+{% block layout %}
+<div class="layout layout--single {% block layout_classes %}{% endblock %}">
+    <section class="layout__main">
+    {% block main %}{% endblock %}
+    </section>
+</div>
+{% endblock %}

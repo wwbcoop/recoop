@@ -1,0 +1,57 @@
+// View of last initiatives in frontpage
+
+.network-title
+  margin-top: $m
+  padding-left: $m*2
+  color: $color_text
+  position: fixed
+  top: $m*2
+  text-transform: uppercase
+  left: calc(100vw - 384px)
+
+.network-nav
+  +links_title
+  background: red
+  a
+    display: block
+    width: 100%
+    padding: $m/3 $m
+
+.network-nav__back
+  display: none !important
+  &::after
+    content: "➔"
+    float: right
+    transform: rotate(180deg)
+
+.network-nav__forward
+  &::after
+    content: "➔"
+    float: right
+
+#red:target
+  .network-nav__forward
+    display: none
+  .network-nav__back
+    display: block !important
+
+.network-list
+  background: $color_text
+  overflow-y: scroll
+  height: 100%
+
+.network-list__item
+  margin: $m
+  border-bottom: 1px dashed white
+  padding-bottom: $m
+  color: white
+
+.network-list__item-name
+  margin-bottom: $m/2
+
+.network-list__item-date
+  font-size: .9em
+  text-transform: uppercase
+  text-align: center
+  float: left
+  padding: $m/2 $m 0

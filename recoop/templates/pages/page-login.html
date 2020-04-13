@@ -1,0 +1,21 @@
+{# Login page #}
+{% extends 'layouts/layout-twocol.html' %}
+{% load i18n %}
+
+{% block htmltitle %}{% trans 'Login' %}{% endblock %}
+
+{% block body_classes %}page--login{% endblock %}
+{% block layout_classes %}layout--login{% endblock %}
+
+{% block left %}
+    {% include 'components/block-landing-info.html' %}
+{% endblock %}
+
+{% block right %}
+<h1 class="page__title page__title--login">
+    {% trans 'Login' %}
+</h1>
+<div class="page__content page__content--login">
+    {% include 'components/form.html' with form=form modifier="default" submit="Login" %}
+</div>
+{% endblock %}

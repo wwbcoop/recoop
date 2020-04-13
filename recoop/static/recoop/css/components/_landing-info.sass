@@ -1,0 +1,33 @@
+// Landing information block in the frontpage
+
+.landing-info
+  margin: 0 $m*3
+
+.landing-info__text
+  line-height: 1.25
+  margin-top: 0
+  p
+    display: inline
+    background-color: rgba(white, .75)
+
+.landing-info__actions
+  margin-top: $m*2
+.landing-info__action
+  padding: $m*.75 $m/2 $m/2
+  font-family: $font_headers
+  font-size: 1.2em
+  display: inline-block
+  margin-bottom: $m/2
+  text-transform: uppercase
+  transition: border-color .1s ease
+  &:hover
+    border: 3px solid rgba(red, .85)
+
+.landing-info__action--info
+  border: 3px solid $color_text
+  background-color: white
+  color: $color_text
+.landing-info__action--signup
+  border: 3px solid $color_text
+  background-color: $color_text
+  color: white

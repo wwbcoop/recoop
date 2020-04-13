@@ -1,0 +1,31 @@
+{# initiatives view list #}
+{% load i18n imagekit %}
+
+<div class="network-view">
+{% for item in items %}
+    <div class="network-view__item network-item">
+        <figure class="network-item__image">
+            {% if item.image %}
+                {% thumbnail item.image 400x400 %}
+            {% else %}
+                <img  src="{% blank_image %}" />
+            {% endif %}
+        </figure>
+        <h4 class="network-item__name">
+            {{ item.name }}
+        </h4>
+        <p class="network-item__date">
+            {{ item.date }}
+        </p>
+        <p class="network-item__summary">
+            {{ item.summary }}
+        </p>
+    </div>
+{% empty %}
+    <div class="network-view__empty">
+    {% blocktrans trimmed %}
+    Todavía no hay iniciativas en la de red de Recoop
+    {% endblocktrans %}
+    </div>
+{% endfor %}
+</div>

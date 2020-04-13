@@ -1,0 +1,8 @@
+{# About #}
+{% load i18n textblock_tags %}
+
+<div class="about">
+    <div class="about__text">
+    {% textblock 'about' request.LANGUAGE_CODE %}
+    </div>
+</div>

@@ -1,0 +1,21 @@
+{# Extend basic page #}
+{% extends 'layouts/layout-single.html' %}
+{% load static utils i18n %}
+
+{% block htmltitle %}404{% endblock %}
+
+{% block body_classes %}page--404{% endblock %}
+{% block layout_classes %}layout--404{% endblock %}
+
+{# Content #}
+{% block main %}
+<div class="msg-404">
+    <p class="msg-404__image">
+      ❌
+    </p>
+    <p class="msg-404__text">
+      <strong>404</strong> #
+      {% trans 'La página que buscas no existe. ¿Las has escrito correctamente?' %}
+    <p>
+</div>
+{% endblock %}
