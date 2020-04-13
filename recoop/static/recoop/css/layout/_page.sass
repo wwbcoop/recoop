@@ -1,16 +1,39 @@
-.layout__left
-  width: 33vw
-  display: inline-block
-  padding: $m*4 0
-.layout__right
-  width: 66vw
-  display: inline-block
-  float: right
-  padding: $m*4 0
+// General layout
 
+.layout__left,
+.layout__right
+  padding: 0
 .layout__right .page__content
-  width: 33vw
-  max-width: 100%
-  max-height: calc(100vh - #{$m*12})
-  overflow-y: scroll
-  padding-right: $m/2
+  padding: $m/2
+  background-color: rgba(white, .9)
+
++breakpoint('xs')
+  .page__sidebar
+    min-height: calc(100vh)
+  .page__sidebar:not(.page__sidebar--front)
+    display: none
+  .layout__right .page__title
+    padding-top: $m*6
++breakpoint('sm')
+  .layout__right
+    padding: $m*4 0 $m !important
++breakpoint('md')
+  .layout__left
+    width: 33vw
+    display: inline-block
+    padding: $m*2 0
+  .layout__right
+    width: 66vw
+    display: inline-block
+    float: right
+  .layout__right .page__content
+    max-height: calc(100vh - #{$m*6})
+    overflow-y: scroll
++breakpoint('lg')
+  .layout__left
+    padding: $m*4 0
+  .layout__right
+    padding: $m*2 0
+  .layout__right .page__content
+    width: 33vw
+    max-height: calc(100vh - #{$m*10})

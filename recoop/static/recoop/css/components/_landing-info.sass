@@ -1,17 +1,24 @@
 // Landing information block in the frontpage
 
 .landing-info
-  margin: 0 $m*3
+  padding: $m*4 $m/2 0
+  +breakpoint('md')
+    padding-top: $m*2 !important
++breakpoint('lg')
+  .landing-info
+    margin: 0 $m*3
 
 .landing-info__text
   line-height: 1.25
-  margin-top: 0
+  +breakpoint('md')
+    margin-top: $m*2
   p
     display: inline
     background-color: rgba(white, .75)
 
 .landing-info__actions
   margin-top: $m*2
+  text-align: center
 .landing-info__action
   padding: $m*.75 $m/2 $m/2
   font-family: $font_headers

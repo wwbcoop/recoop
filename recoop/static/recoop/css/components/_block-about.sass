@@ -5,11 +5,14 @@
   line-height: 1.3em
   font-family: $font_headers
   color: $color_text
+  text-align: right
   p
     +links_text
     margin-bottom: $m/2
   p:last-child
     font-family: $font_text
+  a
+    padding: 0 $m/3
 .about__links
   margin: $m
   +links_text
@@ -17,3 +20,13 @@
   margin-bottom: $m/3
   &::before
     content: "· "
+
++breakpoint('sm')
+  .about
+    border-right: 4px solid
+    margin-top: $m*4
+    padding: 0 $m*2 $m*2 0
++breakpoint('md')
+  .about
+    margin-top: 0
+    padding-top: $m*2

@@ -8,15 +8,17 @@
 {% block layout_classes %}layout--apply{% endblock %}
 
 {% block left %}
+<div class="page__sidebar page__sidebar--apply">
     {% include 'components/block-landing-info.html' %}
+</div>
 {% endblock %}
 
 {% block right %}
-    <h1 class="page__title page__title--apply">
-        {% trans 'Solicita un dominio' %}
-    </h1>
-    <div class="page__content page__content--apply">
-        {% trans 'Enviar solicitud' as form_submit %}
-        {% include 'components/form.html' with form=form modifier="default" submit=form_submit %}
-    </div>
+<h1 class="page__title page__title--apply">
+    {% trans 'Solicita un dominio' %}
+</h1>
+<div class="page__content page__content--apply">
+    {% trans 'Enviar solicitud' as form_submit %}
+    {% include 'components/form.html' with form=form modifier="default" submit=form_submit %}
+</div>
 {% endblock %}
