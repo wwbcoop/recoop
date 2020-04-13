@@ -55,6 +55,9 @@ docs/_build/
 # Migrations
 migrations/0*.py
 
+# Assets
+assets/*
+
 # Styles
 .sass-cache
 style.min.css
