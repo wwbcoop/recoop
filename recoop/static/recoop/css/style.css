@@ -419,7 +419,8 @@ select:hover {
     border-width: 0 0 0 48px; } }
 @keyframes show-up {
   0% {
-    opacity: 0; }
+    opacity: 0;
+    transform: translateY(50px); }
   100% {
     opacity: 1; } }
 .clickable:hover {
@@ -551,6 +552,10 @@ select:hover {
 .form__field--default textarea:focus {
   border-color: red; }
 
+.form__field-errors--default {
+  color: red;
+  font-size: 0.95em; }
+
 .form__submit--default,
 .form__cancel--default {
   padding: 18px 12px 12px;
@@ -619,6 +624,18 @@ select:hover {
     appearance: none;
     -moz-appearance: none;
     -webkit-appearance: none; }
+
+.messages {
+  position: absolute;
+  top: 48px;
+  right: 48px;
+  width: 240px;
+  padding: 12px;
+  background-color: blue;
+  color: white;
+  border-radius: 4px;
+  font-family: "Spartan", sans-serif;
+  animation: show-up 2s 1; }
 
 .network-title {
   margin-top: 24px;

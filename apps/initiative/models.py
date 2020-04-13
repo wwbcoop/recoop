@@ -2,6 +2,7 @@
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
 from django.utils import timezone
+from django.utils.text import slugify
 
 class Initiative(models.Model):
     """ Block of text """
@@ -36,6 +37,7 @@ class Initiative(models.Model):
         max_length = 128,
         blank = False,
         null = True,
+        unique = True,
         help_text = _(
             'Escoge el subdominio que deseas usar. Por ejemplo un valor "ejemplo" '
             'creará un subdominio "ejemplo.coop.re"'
@@ -76,7 +78,7 @@ class Initiative(models.Model):
         verbose_name_plural = _('iniciativas')
 
     def __str__(self):
-        return self.title
+        return self.name
 
     def save(self, *args, **kwargs):
         """Populate automatically 'slug' field"""

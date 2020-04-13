@@ -30,7 +30,7 @@
         {% block page_header %}{% endblock %}
     </head>
 
-    <body class="{% if user.is_authenticated %}logged-in{% endif %}{% block body_classes %}{% endblock %}">
+    <body class="{% if user.is_authenticated %}logged-in{% endif %} {% block body_classes %}{% endblock %}">
         {# User toolbar #}
         <nav class="region-toolbar">
             {% include 'components/menu-user.html' %}
