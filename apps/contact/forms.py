@@ -8,7 +8,7 @@ from captcha.fields import ReCaptchaField
 from captcha.widgets import ReCaptchaV3
 
 
-class ContactForm(forms.Form):
+class ContactFormDev(forms.Form):
     """ Contact form """
 
     name = forms.CharField(
@@ -24,13 +24,19 @@ class ContactForm(forms.Form):
         label = _('Mensaje'),
         widget = forms.Textarea
     )
-    captcha = ReCaptchaField(widget=ReCaptchaV3)
 
     def send_email(self):
         # send notification to contact sender
         send_mail(
-            self.cleaned_data['subject'],
-            self.cleaned_data['message'],
+            _(
+                'Hemos recibido un mensaje de contacto en coop.re'
+            ),
+            '\n'.join([
+                'De: %s <%s>' % ( self.cleaned_data['name'], self.cleaned_data['email']),
+                'Asunto: %s' % self.cleaned_data['subject'],
+                'Cuerpo: %s' % self.cleaned_data['message'],
+                'Este es un mensaje automático, no lo respondas!'
+            ]),
             'no-reply@coop.re',
             [ self.cleaned_data['email'] ],
             fail_silently=False,
@@ -48,3 +54,7 @@ class ContactForm(forms.Form):
             recipients,
             fail_silently=False,
         )
+
+class ContactForm(ContactFormDev):
+
+    captcha = ReCaptchaField(widget=ReCaptchaV3)
