@@ -1,4 +1,4 @@
-Django==2.2.12
+Django==2.2.24
 django-appconf==1.0.4
 django-ckeditor==5.9.0
 django-geojson==3.0.0
