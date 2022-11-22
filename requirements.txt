@@ -8,7 +8,7 @@ django-leaflet==0.26.0
 django-recaptcha==2.0.6
 jsonfield==3.0.0
 pilkit==2.0
-Pillow==7.1.1
+Pillow==9.3.0
 python-magic==0.4.15
 pytz==2019.3
 six==1.14.0
